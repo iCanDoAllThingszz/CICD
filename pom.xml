@@ -61,7 +61,7 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.example.kurbenetes.KurbenetesApplication</mainClass>
-                    <skip>true</skip>
+                    <skip>false</skip> <!--这里的配置会让springboot跳过打包环节 将其改为false-->
                 </configuration>
                 <executions>
                     <execution>
@@ -71,18 +71,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.example.kurbenetes.KurbenetesApplication</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
             </plugin>
         </plugins>
     </build>
