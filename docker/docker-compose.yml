@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  mytest:
+    # docker-compose.yml找docker.file
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: mytest
+    container_name: mytest
+    ports:
+      - 8080:8080
