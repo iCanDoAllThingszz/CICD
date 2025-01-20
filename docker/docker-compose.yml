@@ -3,7 +3,7 @@ services:
   mytest:
     # docker-compose.yml找docker.file
     build:
-      context: ..
+      context: .
       dockerfile: Dockerfile
     image: mytest
     container_name: mytest
